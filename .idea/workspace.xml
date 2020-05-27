@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added menu bar, mnemonics, accelerators, file choosers." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>p1</find>
+      <find>s8</find>
+      <find>btn2</find>
+      <find>submitBtn</find>
+      <find>s9</find>
+      <find>NavPanel</find>
+      <find>NavEvent</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>pText</replace>
+      <replace>s3</replace>
+      <replace>loginBtn</replace>
+      <replace>clearBtn</replace>
+      <replace>registerBtn</replace>
+      <replace>s6</replace>
+      <replace>bugFormPanel</replace>
+      <replace>NavEventObject</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="KarterJP &lt;karterjp@gmail.com&gt;" />
+        <option value="KarterJP &lt;KarterJP@Gmail.com&gt;" />
+        <option value="KarterJP@Gmail.com" />
+        <option value="KarterJP" />
+        <option value="Karter Phillips" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cH6xHHOTE0eC8mjZVuvpprrVJ0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/BugManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="BugManager" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Karter\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="" />
+      <created>1589247136041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589247136041</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First version of Bug Manager being added to repository">
+      <created>1590096578562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590096578563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added main panel and gave slight functionality to navigation panel">
+      <created>1590107288452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590107288452</updated>
+    </task>
+    <task id="LOCAL-00003" summary="NavPanel will now add bug descriptions with its accompanying project name to the main text panel">
+      <created>1590172691642</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590172691643</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added a priority list to bugs">
+      <created>1590188254262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590188254262</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added NavEvent.java&#10;Renamed Registration.java to Signup.java">
+      <created>1590343152450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590343152450</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added .gitignore file">
+      <created>1590345160639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590345160640</updated>
+    </task>
+    <task id="LOCAL-00007" summary="New repository">
+      <created>1590345359362</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590345359362</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removed .gitignore&#10;Added .class files">
+      <created>1590346417823</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590346417823</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Move production">
+      <created>1590347770111</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590347770111</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added menu bar, mnemonics, accelerators, file choosers.">
+      <created>1590523038720</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590523038720</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$USER_HOME$/Documents/BugManager" />
+    </ignored-roots>
+    <MESSAGE value="First version" />
+    <MESSAGE value="First version of Bug Manager being added to repository" />
+    <MESSAGE value="Added main panel and gave slight functionality to navigation panel" />
+    <MESSAGE value="NavPanel will now add bug descriptions with its accompanying project name to the main text panel" />
+    <MESSAGE value="Added a priority list to bugs" />
+    <MESSAGE value="Added NavEvent.java&#10;Renamed Registration.java to Signup.java" />
+    <MESSAGE value="Added .gitignore file" />
+    <MESSAGE value="New repository" />
+    <MESSAGE value="Removed .gitignore&#10;Added .class files" />
+    <MESSAGE value="Move production" />
+    <MESSAGE value="Added menu bar, mnemonics, accelerators, file choosers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added menu bar, mnemonics, accelerators, file choosers." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590517719930">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590517719930" />
+    <state x="416" y="108" key="CommitChangelistDialog2" timestamp="1590346240347">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="416" y="108" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1590346240347" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1590345242799">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590345242799" />
+    <state x="831" y="437" key="Github.ShareDialog" timestamp="1590347124055">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="831" y="437" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590347124055" />
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590522886781">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
+    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590522886781">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
+    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590522886780">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886780" />
+    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590522886781">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
+    <state x="440" y="114" key="SettingsEditor" timestamp="1590513616712">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="114" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590513616712" />
+    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590523086012">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590523086012" />
+    <state x="784" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590538590048">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="784" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590538590048" />
+    <state x="758" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1590539584357">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="758" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590539584357" />
+  </component>
+</project>
