@@ -16,7 +16,48 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added menu bar, mnemonics, accelerators, file choosers." />
+    <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added files">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/BugFileFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Bug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PriorityCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/BugManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/MainPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/NavEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/NavListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/NavPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/PriorityCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Signup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/TextFieldLimit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Toolbar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/ToolbarListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BugManager/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BugManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/NavEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/NavListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/NavPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Signup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TextFieldLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Toolbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Toolbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToolbarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ToolbarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Window.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,30 +70,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>p1</find>
-      <find>s8</find>
-      <find>btn2</find>
-      <find>submitBtn</find>
-      <find>s9</find>
-      <find>NavPanel</find>
-      <find>NavEvent</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>pText</replace>
-      <replace>s3</replace>
-      <replace>loginBtn</replace>
-      <replace>clearBtn</replace>
-      <replace>registerBtn</replace>
-      <replace>s6</replace>
-      <replace>bugFormPanel</replace>
-      <replace>NavEventObject</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -82,7 +103,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
       <module name="BugManager" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -177,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590523038720</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added files">
+      <created>1590541508121</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590541508121</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,13 +249,18 @@
     <MESSAGE value="Removed .gitignore&#10;Added .class files" />
     <MESSAGE value="Move production" />
     <MESSAGE value="Added menu bar, mnemonics, accelerators, file choosers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added menu bar, mnemonics, accelerators, file choosers." />
+    <MESSAGE value="Added files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590517719930">
+    <state x="845" y="402" key="#Notifications" timestamp="1590541571029">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590517719930" />
+    <state x="845" y="402" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1590541571029" />
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590547684053">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590547684053" />
     <state x="416" y="108" key="CommitChangelistDialog2" timestamp="1590346240347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -240,30 +273,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="831" y="437" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590347124055" />
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590522886781">
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590546846692">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
-    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590522886781">
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590546846692" />
+    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590546846692">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
-    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590522886780">
+    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590546846692" />
+    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590546846691">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886780" />
-    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590522886781">
+    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590546846691" />
+    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590546846692">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590522886781" />
+    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590546846692" />
     <state x="440" y="114" key="SettingsEditor" timestamp="1590513616712">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="440" y="114" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590513616712" />
-    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590523086012">
+    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590541551401">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590523086012" />
+    <state x="624" y="321" width="819" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1590541551401" />
     <state x="784" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590538590048">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

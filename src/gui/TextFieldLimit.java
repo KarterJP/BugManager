@@ -1,3 +1,5 @@
+package gui;
+
 import javax.swing.text.*;
 
 class TextFieldLimit extends PlainDocument {

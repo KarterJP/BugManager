@@ -1,3 +1,5 @@
+package gui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +12,7 @@ import java.awt.event.KeyEvent;
 public class Window extends JFrame{
     private Toolbar toolbar;
     private NavPanel navPanel;
-    private MainPanel mainPanel;
+    private TextPanel textPanel;
     private JFileChooser fileChooser;
     // Constructor
     Window() {
@@ -25,6 +27,7 @@ public class Window extends JFrame{
         // Menu bar
         setJMenuBar(createMenuBar());
         fileChooser = new JFileChooser();
+        fileChooser.addChoosableFileFilter(new BugFileFilter());
         // toolbar panel
         toolbar = new Toolbar();
         add(toolbar, BorderLayout.NORTH);
@@ -45,15 +48,15 @@ public class Window extends JFrame{
                 int priorityCat = e.getPriorityCat();
                 String description = e.getDescription();
 
-                mainPanel.appendText(project, priorityCat, description);
+                textPanel.appendText(project, priorityCat, description);
             }
             public void addBug(NavEvent e) {
-            //    mainPanel.addBugPanel(project, description);
+            //    textPanel.addBugPanel(project, description);
             }
         });
-        // mainPanel
-        mainPanel = new MainPanel();
-        add(mainPanel, BorderLayout.CENTER);
+        // textPanel
+        textPanel = new TextPanel();
+        add(textPanel, BorderLayout.CENTER);
     }
     /**
      * Used to create a JMenuBar
@@ -73,7 +76,7 @@ public class Window extends JFrame{
             fileMenu.addSeparator(); ///// Separation
             fileMenu.add(exitItem);
             // windowMenu //
-            JMenu windowMenu = new JMenu("Window");
+            JMenu viewMenu = new JMenu("View");
                 // showMenu (windowMenu sub menu) //
                 JMenu showMenu = new JMenu("Show");
                     JCheckBoxMenuItem showNavPanel = new JCheckBoxMenuItem("Bug Form");
@@ -84,10 +87,17 @@ public class Window extends JFrame{
                 showMenu.add(showNavPanel);
                 showMenu.add(showToolbar);
             // Adding submenus to windowMenu
-            windowMenu.add(showMenu);
+            viewMenu.add(showMenu);
         // Adding menus to menuBar
         menuBar.add(fileMenu);
-        menuBar.add(windowMenu);
+        menuBar.add(viewMenu);
+
+        // Mnemonics
+        fileMenu.setMnemonic(KeyEvent.VK_F);
+        viewMenu.setMnemonic(KeyEvent.VK_V);
+        exitItem.setMnemonic(KeyEvent.VK_X);
+        // Accelerators
+        exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
 
         // Action listeners
         showNavPanel.addActionListener(new ActionListener() {
@@ -107,14 +117,14 @@ public class Window extends JFrame{
         exportDataItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    mainPanel.appendText(fileChooser.getSelectedFile());
+                    textPanel.appendText(fileChooser.getSelectedFile());
                 }
             }
         });
         importDataItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    mainPanel.appendText(fileChooser.getSelectedFile());
+                    textPanel.appendText(fileChooser.getSelectedFile());
                 }
             }
         });
@@ -125,16 +135,8 @@ public class Window extends JFrame{
                 if(action == JOptionPane.OK_OPTION) {
                     System.exit(0);
                 }
-
             }
         });
-
-        // Mnemonics
-        fileMenu.setMnemonic(KeyEvent.VK_F);
-        exitItem.setMnemonic(KeyEvent.VK_X);
-        // Accelerators
-        exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
-
         return menuBar;
     }
 }

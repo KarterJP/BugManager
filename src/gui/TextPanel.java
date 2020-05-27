@@ -1,24 +1,26 @@
+package gui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
-public class MainPanel extends JPanel {
+public class TextPanel extends JPanel {
     private JPanel bug;
     private JScrollPane scroll;
     private JTextArea notepad;
     // Constructor
-    MainPanel() {
+    TextPanel() {
         setBackground(new Color(160, 160, 160, 150));
         setBorder(BorderFactory.createEtchedBorder());
         setLayout(new BorderLayout());
-        // Adding text area to MainPanel
+        // Adding text area to TextPanel
         notepad = new JTextArea();
         scroll = new JScrollPane(notepad);
         notepad.setRows(8);
         add(scroll, BorderLayout.SOUTH);
     }
     /**
-     * Adding text to the end of the MainPanel text area
+     * Adding text to the end of the TextPanel text area
      * @param project
      * @param description
      */
@@ -34,7 +36,7 @@ public class MainPanel extends JPanel {
         notepad.append(file+"\n");
     }
     /**
-     * Creates panel to be displayed at the top of MainPanel
+     * Creates panel to be displayed at the top of TextPanel
      * @param project
      * @param description
      */
@@ -42,7 +44,7 @@ public class MainPanel extends JPanel {
         // Creating labels
         JLabel projectLabel = new JLabel(project);
         JLabel descriptionLabel = new JLabel(description);
-        // Adding panel object to MainPanel
+        // Adding panel object to TextPanel
         bug = new JPanel();
         add(bug, BorderLayout.NORTH);
         bug.setLayout(new GridBagLayout());
