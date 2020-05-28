@@ -105,7 +105,7 @@ public class NavPanel extends JPanel implements ActionListener{
         descriptionArea.setText("");
     }
     /**
-     * Formatting components within NavPanel
+     * Arranging components within NavPanel
      */
     public void layoutComponents() {
         // Declaring variables
@@ -113,7 +113,6 @@ public class NavPanel extends JPanel implements ActionListener{
         Insets rightInset = new Insets(0,0,0,7);
         GridBagConstraints gc = new GridBagConstraints();
         ////////////////////////////// FIRST ROW //////////////////////////////
-        // Initializing grid fields
         gc.weightx = 1;
         gc.weighty = 0.1;
         gc.gridx = 0;
@@ -121,36 +120,29 @@ public class NavPanel extends JPanel implements ActionListener{
         gc.fill = GridBagConstraints.NONE;
         gc.anchor = GridBagConstraints.LINE_END;
         gc.insets = rightInset;
-        // Adding project name label
         add(projectNameLabel, gc);
         //// Second column ////
         gc.insets = noInsets;
         gc.gridx = 1;
         gc.gridy = 0;
-        // Adding project name text field
         gc.anchor = GridBagConstraints.LINE_START;
         add(projectNameField, gc);
         ////////////////////////////// SECOND ROW //////////////////////////////
-        // Changing grid fields
         gc.gridx = 0;
         gc.gridy = 1;
         gc.weighty = 0.1;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.LINE_START;
         gc.insets = rightInset;
-        // Adding description label
         add(priorityLabel, gc);
         ////////////////////////////// THIRD ROW //////////////////////////////
-        // Changing grid fields
         gc.gridx = 0;
         gc.gridy = 2;
         gc.gridwidth = 2;
         gc.fill = GridBagConstraints.BOTH;
         gc.insets = noInsets;
-        // Adding priority list
         add(priorityList, gc);
         ////////////////////////////// FOURTH ROW //////////////////////////////
-        // Changing grid fields
         gc.gridx = 0;
         gc.gridy = 3;
         gc.weighty = 0.1;
@@ -158,10 +150,8 @@ public class NavPanel extends JPanel implements ActionListener{
         gc.fill = GridBagConstraints.NONE;
         gc.anchor = GridBagConstraints.LINE_START;
         gc.insets = rightInset;
-        // Adding description label
         add(descriptionLabel, gc);
         ////////////////////////////// FIFTH ROW //////////////////////////////
-        // Changing grid fields
         gc.insets = noInsets;
         gc.gridx = 0;
         gc.gridy = 4;
@@ -169,28 +159,25 @@ public class NavPanel extends JPanel implements ActionListener{
         gc.gridwidth = 2;
         gc.anchor = GridBagConstraints.PAGE_START;
         gc.fill = GridBagConstraints.BOTH;
-        // Adding description text field
         add(new JScrollPane(descriptionArea), gc);
         ////////////////////////////// SIXTH ROW //////////////////////////////
-        // Changing grid fields
         gc.gridx = 0;
         gc.gridy = 5;
         gc.weighty = 1;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.FIRST_LINE_END;
         gc.fill = GridBagConstraints.NONE;
-        // Adding submit button
         add(submit, gc);
         //// Second column ////
         gc.gridx = 1;
         gc.gridy = 5;
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
-        // Adding clear button
         add(clear, gc);
     }
 }
 /**
- * Small utility class for assigning IDs to strings in the priority list
+ * Small utility class
+ * for assigning IDs to strings in the priority list
  */
 class PriorityCategory {
     private int id;

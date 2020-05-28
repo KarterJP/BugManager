@@ -2,8 +2,12 @@ package gui;
 
 import javax.swing.text.*;
 
+/**
+ * Only to set limits on text fields
+ */
 class TextFieldLimit extends PlainDocument {
     private int limit;
+
     TextFieldLimit(int limit) {
         super();
         this.limit = limit;

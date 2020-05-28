@@ -5,14 +5,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Dialog popup for existing users to login to an account
+ */
 public class Login extends JDialog implements ActionListener {
     JLabel title, uLabel, pLabel;
     JTextField uText;
     JButton loginBtn;
     JPasswordField pText;
-    // Constructor
+
     Login() {
-        // Frame
+        // Frame setup
         setVisible(true);
         setSize(250, 300);
         setLocationRelativeTo(null);
@@ -34,7 +37,11 @@ public class Login extends JDialog implements ActionListener {
         // Applying layout
         layoutComponents();
     }
-    // Handler for button clicks
+
+    /**
+     * Handler for login button
+     * @param e - ActionEvent object
+     */
     public void actionPerformed(ActionEvent e) {
         // If login button is clicked
         if (e.getSource() == loginBtn) {
@@ -66,7 +73,7 @@ public class Login extends JDialog implements ActionListener {
         }
     }
     /**
-     * Formatting components within Login
+     * Arranging components within Login
      */
     public void layoutComponents() {
         // Declaring variables
@@ -79,39 +86,33 @@ public class Login extends JDialog implements ActionListener {
         gc.fill = GridBagConstraints.NONE;
         gc.anchor = GridBagConstraints.CENTER;
         gc.gridwidth = 2;
-        // Adding title
         add(title, gc);
         ////////////////////////////// SECOND ROW //////////////////////////////
         gc.gridx = 0;
         gc.gridy = 1;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.LINE_END;
-        // Adding username label
         add(uLabel, gc);
         //////// SECOND COLUMN ////////
         gc.gridx = 1;
         gc.gridy = 1;
         gc.anchor = GridBagConstraints.LINE_START;
-        // Adding username text field
         add(uText, gc);
         ////////////////////////////// THIRD ROW //////////////////////////////
         gc.gridx = 0;
         gc.gridy = 2;
         gc.anchor = GridBagConstraints.FIRST_LINE_END;
-        // Adding password label
         add(pLabel, gc);
         //////// SECOND COLUMN ////////
         gc.gridx = 1;
         gc.gridy = 2;
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
-        // Adding password text field
         add(pText, gc);
         ////////////////////////////// FOURTH ROW //////////////////////////////
         gc.gridx = 0;
         gc.gridy = 3;
         gc.gridwidth = 2;
         gc.fill = GridBagConstraints.BOTH;
-        // Adding submit button
         add(loginBtn, gc);
     }
 }

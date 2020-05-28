@@ -28,14 +28,14 @@ public class Toolbar extends JPanel implements ActionListener {
     }
     /**
      * Setting up app listener interface on toolbar
-     * @param listener
+     * @param listener - ToolbarListener object
      */
     public void setToolbarListener(ToolbarListener listener) {
         this.toolbarListener = listener;
     }
     /**
      * Action listener to operate on toolbar buttons
-     * @param e
+     * @param e - ActionEvent object
      */
     @Override
     public void actionPerformed(ActionEvent e) {

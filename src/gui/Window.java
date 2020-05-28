@@ -1,7 +1,6 @@
 package gui;
 
 import controller.Controller;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 /**
- * Main window of the application
+ * Main frame of the application
  */
 public class Window extends JFrame{
     private Toolbar toolbar;
@@ -17,7 +16,7 @@ public class Window extends JFrame{
     private TablePanel tablePanel;
     private JFileChooser fileChooser;
     private Controller controller;
-    // Constructor
+
     Window() {
         // JFrame container window
         setTitle("Application");
