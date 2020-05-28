@@ -87,7 +87,6 @@ public class NavPanel extends JPanel implements ActionListener{
                 NavEvent navEvent = new NavEvent(this, project, id, description);
 
                 navListener.submitOccurred(navEvent);
-                //navListener.addBug(project, description);
                 // Removing text from description only
                 descriptionArea.setText("");
             }

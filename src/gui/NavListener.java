@@ -5,6 +5,4 @@ package gui;
  */
 public interface NavListener {
     void submitOccurred(NavEvent navEvent);
-
-    void addBug(NavEvent navEvent);
 }

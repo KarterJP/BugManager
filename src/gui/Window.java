@@ -1,5 +1,7 @@
 package gui;
 
+import controller.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,8 +14,9 @@ import java.awt.event.KeyEvent;
 public class Window extends JFrame{
     private Toolbar toolbar;
     private NavPanel navPanel;
-    private TextPanel textPanel;
+    private TablePanel tablePanel;
     private JFileChooser fileChooser;
+    private Controller controller;
     // Constructor
     Window() {
         // JFrame container window
@@ -24,6 +27,8 @@ public class Window extends JFrame{
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Creating controller
+        controller = new Controller();
         // Menu bar
         setJMenuBar(createMenuBar());
         fileChooser = new JFileChooser();
@@ -44,19 +49,14 @@ public class Window extends JFrame{
         add(navPanel, BorderLayout.WEST);
         navPanel.setNavListener(new NavListener() {
             public void submitOccurred(NavEvent e) {
-                String project = e.getProject();
-                int priorityCat = e.getPriorityCat();
-                String description = e.getDescription();
-
-                textPanel.appendText(project, priorityCat, description);
-            }
-            public void addBug(NavEvent e) {
-            //    textPanel.addBugPanel(project, description);
+                controller.addBug(e);
+                tablePanel.refresh();
             }
         });
-        // textPanel
-        textPanel = new TextPanel();
-        add(textPanel, BorderLayout.CENTER);
+        // tablePanel
+        tablePanel = new TablePanel();
+        add(tablePanel, BorderLayout.CENTER);
+        tablePanel.setData(controller.getBugs());
     }
     /**
      * Used to create a JMenuBar
@@ -117,14 +117,14 @@ public class Window extends JFrame{
         exportDataItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    textPanel.appendText(fileChooser.getSelectedFile());
+                    //tablePanel.appendText(fileChooser.getSelectedFile());
                 }
             }
         });
         importDataItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    textPanel.appendText(fileChooser.getSelectedFile());
+                    //tablePanel.appendText(fileChooser.getSelectedFile());
                 }
             }
         });

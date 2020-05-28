@@ -1,50 +1,47 @@
 package gui;
 
+import model.Bug;
+
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
+import java.util.List;
 
-public class TextPanel extends JPanel {
+public class TablePanel extends JPanel {
     private JPanel bug;
     private JScrollPane scroll;
     private JTextArea notepad;
+    private JTable table;
+    private BugTableModel bugTableModel;
     // Constructor
-    TextPanel() {
+    public TablePanel() {
         setBackground(new Color(160, 160, 160, 150));
         setBorder(BorderFactory.createEtchedBorder());
         setLayout(new BorderLayout());
-        // Adding text area to TextPanel
-        notepad = new JTextArea();
-        scroll = new JScrollPane(notepad);
-        notepad.setRows(8);
-        add(scroll, BorderLayout.SOUTH);
-    }
-    /**
-     * Adding text to the end of the TextPanel text area
-     * @param project
-     * @param description
-     */
-    public void appendText(String project, int priorityCat, String description) {
-        project = project.trim();
-        description = description.trim();
-
-        notepad.append(project.toUpperCase() + ": " + description+": "+priorityCat+"\n");
+        // Creating BugTableModel
+        bugTableModel = new BugTableModel();
+        // Adding table to TablePanel
+        table = new JTable(bugTableModel);
+        setLayout(new BorderLayout());
+        add(new JScrollPane(table), BorderLayout.CENTER);
     }
 
-    public void appendText(File fileChooser) {
-        String file = fileChooser.toString();
-        notepad.append(file+"\n");
+    public void setData(List<Bug> db) {
+        bugTableModel.setData(db);
+    }
+
+    public void refresh() {
+        bugTableModel.fireTableDataChanged();
     }
     /**
-     * Creates panel to be displayed at the top of TextPanel
+     * Creates panel to be displayed at the top of TablePanel
      * @param project
      * @param description
-     */
+     *
     public void addBugPanel(String project, String description) {
         // Creating labels
         JLabel projectLabel = new JLabel(project);
         JLabel descriptionLabel = new JLabel(description);
-        // Adding panel object to TextPanel
+        // Adding panel object to TablePanel
         bug = new JPanel();
         add(bug, BorderLayout.NORTH);
         bug.setLayout(new GridBagLayout());
@@ -61,4 +58,5 @@ public class TextPanel extends JPanel {
         bug.add(descriptionLabel);
         ////////////////////////////// END OF FORMATTING //////////////////////////////
     }
+    */
 }
