@@ -1,10 +1,12 @@
 package gui;
 
 import model.Bug;
-
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
+/**
+ * Data model for BugTable
+ */
 public class BugTableModel extends AbstractTableModel {
     private List<Bug> db;
     private String[] colNames = {"ID", "Project Name", "Priority Level", "Description"};

@@ -64,14 +64,14 @@ public class NavPanel extends JPanel implements ActionListener{
     }
     /**
      * Setting navigation listener
-     * @param listener
+     * @param listener - NavListener object
      */
     public void setNavListener(NavListener listener) {
         this.navListener = listener;
     }
     /**
      * Button handlers for submit and clear
-     * @param e
+     * @param e - ActionEvent object
      */
     @Override
     public void actionPerformed(ActionEvent e) {

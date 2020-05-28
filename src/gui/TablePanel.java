@@ -1,18 +1,17 @@
 package gui;
 
 import model.Bug;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
+/**
+ * Presents data in table format to the user
+ */
 public class TablePanel extends JPanel {
-    private JPanel bug;
-    private JScrollPane scroll;
-    private JTextArea notepad;
     private JTable table;
     private BugTableModel bugTableModel;
-    // Constructor
+
     public TablePanel() {
         setBackground(new Color(160, 160, 160, 150));
         setBorder(BorderFactory.createEtchedBorder());
@@ -25,38 +24,18 @@ public class TablePanel extends JPanel {
         add(new JScrollPane(table), BorderLayout.CENTER);
     }
 
+    /**
+     * Sends list of Bug objects to BugTableModel
+     * @param db - list of Bug objects
+     */
     public void setData(List<Bug> db) {
         bugTableModel.setData(db);
     }
 
+    /**
+     * Updates the users table when data is submitted
+     */
     public void refresh() {
         bugTableModel.fireTableDataChanged();
     }
-    /**
-     * Creates panel to be displayed at the top of TablePanel
-     * @param project
-     * @param description
-     *
-    public void addBugPanel(String project, String description) {
-        // Creating labels
-        JLabel projectLabel = new JLabel(project);
-        JLabel descriptionLabel = new JLabel(description);
-        // Adding panel object to TablePanel
-        bug = new JPanel();
-        add(bug, BorderLayout.NORTH);
-        bug.setLayout(new GridBagLayout());
-        bug.setBackground(new Color(100,140,170,210));
-        ////////////////////////////// BEGINNING OF FORMATTING //////////////////////////////
-        GridBagConstraints gc = new GridBagConstraints();
-        gc.gridx = 0;
-        gc.gridy = 0;
-        gc.anchor = GridBagConstraints.CENTER;
-        bug.add(projectLabel);
-        // SECOND COLUMN
-        gc.gridx = 1;
-        gc.gridy = 0;
-        bug.add(descriptionLabel);
-        ////////////////////////////// END OF FORMATTING //////////////////////////////
-    }
-    */
 }

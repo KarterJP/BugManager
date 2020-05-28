@@ -2,23 +2,24 @@ package gui;
 
 import java.util.EventObject;
 
+/**
+ * Serves as creator of EventObjects for the NavPanel
+ */
 public class NavEvent extends EventObject {
     private String project;
     private int priorityCat;
     private String description;
     /**
-     * Constructor
-     * @param source
+     * @param source - event source
      */
     public NavEvent(Object source) {
         super(source);
     }
     /**
-     * Constructor
-     * @param source
-     * @param project
-     * @param priorityCat
-     * @param description
+     * @param source - event source
+     * @param project - project name
+     * @param priorityCat - priority category
+     * @param description - description of bug
      */
     public NavEvent(Object source, String project, int priorityCat, String description) {
         super(source);
