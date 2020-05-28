@@ -1,6 +1,11 @@
 package model;
 
-public class Bug {
+import java.io.Serializable;
+
+/**
+ * Instantiates bug objects
+ */
+public class Bug implements Serializable {
     private static int count = 0;
     private int id;
     private String project;
@@ -14,7 +19,7 @@ public class Bug {
         this.id = count;
         count++;
     }
-
+    // Getters and setters
     public int getId() {
         return id;
     }
