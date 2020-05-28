@@ -6,7 +6,7 @@ import java.util.List;
 public class Database {
     private ArrayList<Bug> bugs;
 
-    Database() {
+    public Database() {
         bugs = new ArrayList<Bug>();
     }
 
