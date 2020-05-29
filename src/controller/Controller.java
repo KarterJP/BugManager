@@ -43,6 +43,14 @@ public class Controller {
         Bug bug = new Bug(project, priorityCategory, description);
         db.addBug(bug);
     }
+
+    /**
+     * Removes bug data from table
+     * @param index - int index of row in data
+     */
+    public void removeBug(int index) {
+        db.removeBug(index);
+    }
     /**
      * Stores data into a file
      * @param file - File object

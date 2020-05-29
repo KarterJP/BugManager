@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 /**
  * Main frame of the application
@@ -37,10 +38,10 @@ public class Window extends JFrame{
         add(toolbar, BorderLayout.NORTH);
         toolbar.setToolbarListener(new ToolbarListener() {
             // Opens the existing user login form
-            public void loginOpened() { new Login(); }
+            public void loginOpened() { new Login(Window.this); }
             // Opens the new user registration form
             public void signupOpened() {
-                new Signup();
+                new Signup(Window.this);
             }
         });
         // navPanel
@@ -56,6 +57,11 @@ public class Window extends JFrame{
         tablePanel = new TablePanel();
         add(tablePanel, BorderLayout.CENTER);
         tablePanel.setData(controller.getBugs());
+        tablePanel.setBugTableListener(new BugTableListener() {
+            public void rowDeleted(int row){
+                controller.removeBug(row);
+            }
+        });
     }
     /**
      * Used to create a JMenuBar
@@ -113,17 +119,28 @@ public class Window extends JFrame{
                 toolbar.setVisible(menuItem.isSelected());
             }
         });
-        exportDataItem.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ev) {
-                if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    //tablePanel.appendText(fileChooser.getSelectedFile());
-                }
-            }
-        });
         importDataItem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
                 if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
-                    //tablePanel.appendText(fileChooser.getSelectedFile());
+                    try {
+                        controller.loadFromFile(fileChooser.getSelectedFile());
+                        tablePanel.refresh();
+                    } catch (IOException e) {
+                        JOptionPane.showMessageDialog(Window.this, "Unable to load data from file.",
+                                "Error importing data", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            }
+        });
+        exportDataItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                if(fileChooser.showOpenDialog(Window.this) == JFileChooser.APPROVE_OPTION) {
+                    try {
+                        controller.saveToFile(fileChooser.getSelectedFile());
+                    } catch (IOException e) {
+                        JOptionPane.showMessageDialog(Window.this, "Unable to save data to file.",
+                                "Error exporting data", JOptionPane.ERROR_MESSAGE);
+                    }
                 }
             }
         });

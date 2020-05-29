@@ -3,13 +3,14 @@ package model;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Serves as reader and writer to and from the database
  */
 public class Database {
-    private ArrayList<Bug> bugs;
+    private List<Bug> bugs;
 
     public Database() {
         bugs = new ArrayList<Bug>();
@@ -27,7 +28,7 @@ public class Database {
      * @return List<Bug> bugs
      */
     public List<Bug> getBugs() {
-        return bugs;
+        return Collections.unmodifiableList(bugs);
     }
 
     /**
@@ -64,5 +65,13 @@ public class Database {
         }
 
         ois.close();
+    }
+
+    /**
+     * Removes all data related to the Bug object at index
+     * @param index - int index of row in data
+     */
+    public void removeBug(int index) {
+        bugs.remove(index);
     }
 }

@@ -14,7 +14,7 @@ public class Login extends JDialog implements ActionListener {
     JButton loginBtn;
     JPasswordField pText;
 
-    Login() {
+    Login(JFrame parent) {
         // Frame setup
         setVisible(true);
         setSize(250, 300);

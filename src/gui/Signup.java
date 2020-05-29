@@ -14,7 +14,7 @@ public class Signup extends JDialog implements ActionListener {
     JPasswordField pText1, pText2;
     JButton registerBtn;
 
-    Signup() {
+    Signup(JFrame parent) {
         // Frame setup
         setVisible(true);
         setSize(400, 400);

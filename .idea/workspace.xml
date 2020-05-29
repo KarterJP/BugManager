@@ -17,15 +17,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added data model">
+      <change afterPath="$PROJECT_DIR$/src/gui/BugTableListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/BugManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/NavPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/NavPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Toolbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Toolbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TablePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +37,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -239,10 +238,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="845" y="402" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1590541571029" />
-    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590620500751">
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590717089993">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590620500751" />
+    <state x="779" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1590717089993" />
     <state x="416" y="108" key="CommitChangelistDialog2" timestamp="1590346240347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -259,22 +258,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="831" y="437" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590347124055" />
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590630766947">
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590718454673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590630766947" />
-    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590630766947">
+    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454673" />
+    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590718454672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590630766947" />
-    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590630766946">
+    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454672" />
+    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590718454670">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590630766946" />
-    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590630766947">
+    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454670" />
+    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590718454672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590630766947" />
+    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454672" />
     <state x="440" y="114" key="SettingsEditor" timestamp="1590548632203">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

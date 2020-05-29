@@ -3,6 +3,10 @@ package gui;
 import model.Bug;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
 /**
@@ -11,6 +15,8 @@ import java.util.List;
 public class TablePanel extends JPanel {
     private JTable table;
     private BugTableModel bugTableModel;
+    private JPopupMenu tablePopup;
+    private BugTableListener bugTableListener;
 
     public TablePanel() {
         setBackground(new Color(160, 160, 160, 150));
@@ -22,6 +28,35 @@ public class TablePanel extends JPanel {
         table = new JTable(bugTableModel);
         setLayout(new BorderLayout());
         add(new JScrollPane(table), BorderLayout.CENTER);
+        // Adding tablePopup menu to table
+        tablePopup = new JPopupMenu();
+        JMenuItem removeItem = new JMenuItem("Delete row");
+        tablePopup.add(removeItem);
+        // Setting mouse listener
+        table.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                int row = table.rowAtPoint(e.getPoint());
+                int x = e.getX();
+                int y = e.getY();
+
+                table.getSelectionModel().setSelectionInterval(row, row);
+
+                if (e.getButton() == MouseEvent.BUTTON3) {
+                    tablePopup.show(table, x, y);
+                }
+            }
+        });
+
+        removeItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int row = table.getSelectedRow();
+
+                if (bugTableListener != null) {
+                    bugTableListener.rowDeleted(row);
+                    bugTableModel.fireTableRowsDeleted(row, row);
+                }
+            }
+        });
     }
 
     /**
@@ -37,5 +72,13 @@ public class TablePanel extends JPanel {
      */
     public void refresh() {
         bugTableModel.fireTableDataChanged();
+    }
+
+    /**
+     * Listens for actions in the table
+     * @param listener - BugTableListener
+     */
+    public void setBugTableListener(BugTableListener listener) {
+        this.bugTableListener = listener;
     }
 }
