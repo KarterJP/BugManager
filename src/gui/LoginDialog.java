@@ -8,19 +8,18 @@ import java.awt.event.ActionListener;
 /**
  * Dialog popup for existing users to login to an account
  */
-public class Login extends JDialog implements ActionListener {
+public class LoginDialog extends JDialog implements ActionListener {
     JLabel title, uLabel, pLabel;
     JTextField uText;
     JButton loginBtn;
     JPasswordField pText;
 
-    Login(JFrame parent) {
+    LoginDialog(JFrame parent) {
         // Frame setup
-        setVisible(true);
+        super(parent,"Login", true);
         setSize(250, 300);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(parent);
         setLayout(new GridBagLayout());
-        setTitle("Login");
         // Buttons, labels and text boxes
         title = new JLabel("Login");
         title.setFont(new Font("Serif", Font.BOLD, 20));
@@ -89,7 +88,7 @@ public class Login extends JDialog implements ActionListener {
         add(title, gc);
         ////////////////////////////// SECOND ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 1;
+        gc.gridy++;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.LINE_END;
         add(uLabel, gc);
@@ -100,7 +99,7 @@ public class Login extends JDialog implements ActionListener {
         add(uText, gc);
         ////////////////////////////// THIRD ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 2;
+        gc.gridy++;
         gc.anchor = GridBagConstraints.FIRST_LINE_END;
         add(pLabel, gc);
         //////// SECOND COLUMN ////////
@@ -110,7 +109,7 @@ public class Login extends JDialog implements ActionListener {
         add(pText, gc);
         ////////////////////////////// FOURTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 3;
+        gc.gridy++;
         gc.gridwidth = 2;
         gc.fill = GridBagConstraints.BOTH;
         add(loginBtn, gc);

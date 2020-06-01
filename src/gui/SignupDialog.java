@@ -8,19 +8,18 @@ import java.sql.*;
 /**
  * Dialog popup for new users to create an account
  */
-public class Signup extends JDialog implements ActionListener {
+public class SignupDialog extends JDialog implements ActionListener {
     JLabel title, uLabel, eLabel, pLabel1, pLabel2;
     JTextField uText, eText;
     JPasswordField pText1, pText2;
     JButton registerBtn;
 
-    Signup(JFrame parent) {
+    SignupDialog(JFrame parent) {
         // Frame setup
-        setVisible(true);
+        super(parent,"Registration", true);
         setSize(400, 400);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(parent);
         setLayout(new GridBagLayout());
-        setTitle("Registration");
         // Buttons, labels and text boxes
         title = new JLabel("Create a new account");
         title.setFont(new Font("Serif", Font.BOLD, 20));
@@ -104,7 +103,7 @@ public class Signup extends JDialog implements ActionListener {
         add(title, gc);
         ////////////////////////////// SECOND ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 1;
+        gc.gridy++;
         gc.weighty = .5;
         gc.gridwidth = 1;
         gc.insets = new Insets(0,0,0,0);
@@ -117,7 +116,7 @@ public class Signup extends JDialog implements ActionListener {
         add(uText, gc);
         ////////////////////////////// THIRD ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 2;
+        gc.gridy++;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.LINE_END;
         add(eLabel, gc);
@@ -128,7 +127,7 @@ public class Signup extends JDialog implements ActionListener {
         add(eText, gc);
         ////////////////////////////// FOURTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 3;
+        gc.gridy++;
         gc.anchor = GridBagConstraints.LINE_END;
         add(pLabel1, gc);
         //////// SECOND COLUMN ////////
@@ -138,7 +137,7 @@ public class Signup extends JDialog implements ActionListener {
         add(pText1, gc);
         ////////////////////////////// FIFTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 4;
+        gc.gridy++;
         gc.anchor = GridBagConstraints.LINE_END;
         add(pLabel2, gc);
         //////// SECOND COLUMN ////////
@@ -148,7 +147,7 @@ public class Signup extends JDialog implements ActionListener {
         add(pText2, gc);
         ////////////////////////////// SIXTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 5;
+        gc.gridy++;
         gc.weighty = 1;
         gc.gridwidth = 2;
         gc.insets = new Insets(50,0,0,0);

@@ -17,14 +17,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added data model">
-      <change afterPath="$PROJECT_DIR$/src/gui/BugTableListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/PrefsDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/PrefsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TablePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/BugTableListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugTableListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/NavEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugFormEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/NavListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugFormListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/NavPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SignupDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ToolbarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ToolbarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,22 +264,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="831" y="437" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590347124055" />
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom" timestamp="1590718454673">
+    <state width="1877" height="188" key="GridCell.Tab.0.bottom" timestamp="1590982121312">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454673" />
-    <state width="1877" height="124" key="GridCell.Tab.0.center" timestamp="1590718454672">
+    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121312" />
+    <state width="1877" height="188" key="GridCell.Tab.0.center" timestamp="1590982121311">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454672" />
-    <state width="1877" height="124" key="GridCell.Tab.0.left" timestamp="1590718454670">
+    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121311" />
+    <state width="1877" height="188" key="GridCell.Tab.0.left" timestamp="1590982121309">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454670" />
-    <state width="1877" height="124" key="GridCell.Tab.0.right" timestamp="1590718454672">
+    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121309" />
+    <state width="1877" height="188" key="GridCell.Tab.0.right" timestamp="1590982121311">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="124" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590718454672" />
+    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121311" />
     <state x="440" y="114" key="SettingsEditor" timestamp="1590548632203">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

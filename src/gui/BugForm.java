@@ -10,15 +10,15 @@ import java.awt.event.KeyEvent;
 /**
  * Panel that appears on the left of the screen (used to add a bug)
  */
-public class NavPanel extends JPanel implements ActionListener{
+public class BugForm extends JPanel implements ActionListener{
     private JLabel projectNameLabel, priorityLabel, descriptionLabel;
     private JTextField projectNameField;
     private JTextArea descriptionArea;
     private JButton submit, clear;
     private JList priorityList;
-    private NavListener navListener;
+    private BugFormListener bugFormListener;
     // Constructor
-    public NavPanel() {
+    public BugForm() {
         // Properties
         setBackground(new Color(230, 230, 230));
         setLayout(new GridBagLayout());
@@ -62,12 +62,13 @@ public class NavPanel extends JPanel implements ActionListener{
         // Applying layout
         layoutComponents();
     }
+
     /**
-     * Setting navigation listener
-     * @param listener - NavListener object
+     * Setting up listener for bug form
+     * @param bugFormListener - bug form listener
      */
-    public void setNavListener(NavListener listener) {
-        this.navListener = listener;
+    public void setBugFormListener(BugFormListener bugFormListener) {
+        this.bugFormListener = bugFormListener;
     }
     /**
      * Button handlers for submit and clear
@@ -78,34 +79,34 @@ public class NavPanel extends JPanel implements ActionListener{
         JButton clicked = (JButton)e.getSource();
 
         if (clicked == submit) {
-            if (navListener != null) {
+            if (bugFormListener != null) {
                 String project = projectNameField.getText();
                 String description = descriptionArea.getText();
                 PriorityCategory priorityCat = (PriorityCategory)priorityList.getSelectedValue();
                 int id = priorityCat.getID();
 
-                NavEvent navEvent = new NavEvent(this, project, id, description);
+                BugFormEvent bugFormEvent = new BugFormEvent(this, project, id, description);
 
-                navListener.submitOccurred(navEvent);
+                bugFormListener.submitOccurred(bugFormEvent);
                 // Removing text from description only
                 descriptionArea.setText("");
             }
         } else if (clicked == clear) {
-            if (navListener != null) {
+            if (bugFormListener != null) {
                 // Removing text from all fields
                 clearText();
             }
         }
     }
     /**
-     * Clears text from every text field within NavPanel
+     * Clears text from every text field within BugForm
      */
     public void clearText() {
         projectNameField.setText("");
         descriptionArea.setText("");
     }
     /**
-     * Arranging components within NavPanel
+     * Arranging components within BugForm
      */
     public void layoutComponents() {
         // Declaring variables
@@ -129,7 +130,7 @@ public class NavPanel extends JPanel implements ActionListener{
         add(projectNameField, gc);
         ////////////////////////////// SECOND ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 1;
+        gc.gridy++;
         gc.weighty = 0.1;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.LINE_START;
@@ -137,14 +138,14 @@ public class NavPanel extends JPanel implements ActionListener{
         add(priorityLabel, gc);
         ////////////////////////////// THIRD ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 2;
+        gc.gridy++;
         gc.gridwidth = 2;
         gc.fill = GridBagConstraints.BOTH;
         gc.insets = noInsets;
         add(priorityList, gc);
         ////////////////////////////// FOURTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 3;
+        gc.gridy++;
         gc.weighty = 0.1;
         gc.gridwidth = 1;
         gc.fill = GridBagConstraints.NONE;
@@ -154,7 +155,7 @@ public class NavPanel extends JPanel implements ActionListener{
         ////////////////////////////// FIFTH ROW //////////////////////////////
         gc.insets = noInsets;
         gc.gridx = 0;
-        gc.gridy = 4;
+        gc.gridy++;
         gc.weighty = 0.1;
         gc.gridwidth = 2;
         gc.anchor = GridBagConstraints.PAGE_START;
@@ -162,7 +163,7 @@ public class NavPanel extends JPanel implements ActionListener{
         add(new JScrollPane(descriptionArea), gc);
         ////////////////////////////// SIXTH ROW //////////////////////////////
         gc.gridx = 0;
-        gc.gridy = 5;
+        gc.gridy++;
         gc.weighty = 1;
         gc.gridwidth = 1;
         gc.anchor = GridBagConstraints.FIRST_LINE_END;

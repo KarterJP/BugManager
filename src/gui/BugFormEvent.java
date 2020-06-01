@@ -3,16 +3,16 @@ package gui;
 import java.util.EventObject;
 
 /**
- * Serves as creator of EventObjects for the NavPanel
+ * Serves as creator of EventObjects for the BugPanel
  */
-public class NavEvent extends EventObject {
+public class BugFormEvent extends EventObject {
     private String project;
     private int priorityCat;
     private String description;
     /**
      * @param source - event source
      */
-    public NavEvent(Object source) {
+    public BugFormEvent(Object source) {
         super(source);
     }
     /**
@@ -21,7 +21,7 @@ public class NavEvent extends EventObject {
      * @param priorityCat - priority category
      * @param description - description of bug
      */
-    public NavEvent(Object source, String project, int priorityCat, String description) {
+    public BugFormEvent(Object source, String project, int priorityCat, String description) {
         super(source);
 
         this.project = project;

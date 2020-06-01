@@ -1,6 +1,6 @@
 package controller;
 
-import gui.NavEvent;
+import gui.BugFormEvent;
 import model.Bug;
 import model.Database;
 import model.PriorityCategory;
@@ -23,7 +23,7 @@ public class Controller {
      * then sends that Bug object to the addBug method in Database.java
      * @param e - NavEvent object
      */
-    public void addBug(NavEvent e) {
+    public void addBug(BugFormEvent e) {
         String project = e.getProject();
         int priorityCatId = e.getPriorityCat();
         String description = e.getDescription();

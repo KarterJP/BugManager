@@ -8,12 +8,11 @@ import javax.swing.*;
 public class App extends JFrame{
     /**
      * MAIN METHOD
-     * @param args
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new Window();
+                new MainFrame();
             }
         });
     }
