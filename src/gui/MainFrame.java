@@ -128,6 +128,7 @@ public class MainFrame extends JFrame{
         exitItem.setMnemonic(KeyEvent.VK_X);
         // Accelerators
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, ActionEvent.CTRL_MASK));
+        prefsItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
 
         ////// ACTION LISTENERS FOR MENU BAR //////
         prefsItem.addActionListener(new ActionListener() {

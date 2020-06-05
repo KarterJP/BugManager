@@ -17,20 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500d2ee7-29ef-4270-8275-5a7c8255ad9a" name="Default Changelist" comment="Added data model">
-      <change afterPath="$PROJECT_DIR$/src/gui/PrefsDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/PrefsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/BugTableListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugTableListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LoginDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/NavEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugFormEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/NavListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugFormListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/NavPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BugForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SignupDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TextFieldLimit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ToolbarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ToolbarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/PrefsDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PrefsDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +61,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -256,30 +247,34 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="757" y="425" key="DetectedRootsChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590548600683" />
-    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1590548586590">
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1591117918929">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590548586590" />
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1591117918929" />
     <state x="831" y="437" key="Github.ShareDialog" timestamp="1590347124055">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="831" y="437" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590347124055" />
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom" timestamp="1590982121312">
+    <state width="1877" height="188" key="GridCell.Tab.0.bottom" timestamp="1591324694539">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121312" />
-    <state width="1877" height="188" key="GridCell.Tab.0.center" timestamp="1590982121311">
+    <state width="1877" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1591324694539" />
+    <state width="1877" height="188" key="GridCell.Tab.0.center" timestamp="1591324694538">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121311" />
-    <state width="1877" height="188" key="GridCell.Tab.0.left" timestamp="1590982121309">
+    <state width="1877" height="188" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1591324694538" />
+    <state width="1877" height="188" key="GridCell.Tab.0.left" timestamp="1591324694538">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121309" />
-    <state width="1877" height="188" key="GridCell.Tab.0.right" timestamp="1590982121311">
+    <state width="1877" height="188" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1591324694538" />
+    <state width="1877" height="188" key="GridCell.Tab.0.right" timestamp="1591324694539">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590982121311" />
+    <state width="1877" height="188" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1591324694539" />
+    <state x="625" y="244" key="NewModule_or_Project.wizard" timestamp="1591117950082">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="625" y="244" key="NewModule_or_Project.wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1591117950082" />
     <state x="440" y="114" key="SettingsEditor" timestamp="1590548632203">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -296,5 +291,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="758" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590539584357" />
+    <state x="685" y="160" key="new project wizard" timestamp="1591294335437">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="685" y="160" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1591294335437" />
   </component>
 </project>
