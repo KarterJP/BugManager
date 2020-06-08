@@ -47,43 +47,43 @@ public class SignupDialog extends JDialog implements ActionListener {
      * @param e - ActionEvent object
      */
     public void actionPerformed(ActionEvent e) {
-        // If register button is clicked
-        if (e.getSource() == registerBtn) {
-            int x = 0;
-            String s1 = uText.getText();
-            String s2 = eText.getText();
-            char[] s3 = pText1.getPassword();
-            char[] s4 = pText2.getPassword();
-            String s5 = new String(s3);
-            String s6 = new String(s4);
-            // If 'password' is the same as 'confirm password'
-            if (s5.equals(s6)) {
-                try {
-                    Class.forName("oracle.jdbc.driver.OracleDriver");
-                    Connection con = DriverManager.getConnection(
-                            "jdbc:oracle:thin:@localhost:1521:BugManager","SYSTEM","Kjp939598");
-                    PreparedStatement ps = con.prepareStatement("insert into USERS values(?,?,?)");
-                    ps.setString(1, s1);
-                    ps.setString(2, s5);
-                    ps.setString(3, s2);
-                    ps.executeQuery();
-                    x++;
-                    if (x > 0) {
-                        JOptionPane.showMessageDialog(registerBtn, "Data Saved Successfully");
-                        this.dispose();
-                    }
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(registerBtn, "Error: " +ex);
-                }
-            } else {
-                JOptionPane.showMessageDialog(registerBtn, "Password Does Not Match");
-            }
-        } else {
-            uText.setText("");
-            eText.setText("");
-            pText1.setText("");
-            pText2.setText("");
-        }
+//        // If register button is clicked
+//        if (e.getSource() == registerBtn) {
+//            int x = 0;
+//            String s1 = uText.getText();
+//            String s2 = eText.getText();
+//            char[] s3 = pText1.getPassword();
+//            char[] s4 = pText2.getPassword();
+//            String s5 = new String(s3);
+//            String s6 = new String(s4);
+//            // If 'password' is the same as 'confirm password'
+//            if (s5.equals(s6)) {
+//                try {
+//                    Class.forName("oracle.jdbc.driver.OracleDriver");
+//                    Connection con = DriverManager.getConnection(
+//                            "jdbc:oracle:thin:@localhost:1521:BugManager","SYSTEM","Kjp939598");
+//                    PreparedStatement ps = con.prepareStatement("insert into USERS values(?,?,?)");
+//                    ps.setString(1, s1);
+//                    ps.setString(2, s5);
+//                    ps.setString(3, s2);
+//                    ps.executeQuery();
+//                    x++;
+//                    if (x > 0) {
+//                        JOptionPane.showMessageDialog(registerBtn, "Data Saved Successfully");
+//                        this.dispose();
+//                    }
+//                } catch (Exception ex) {
+//                    JOptionPane.showMessageDialog(registerBtn, "Error: " +ex);
+//                }
+//            } else {
+//                JOptionPane.showMessageDialog(registerBtn, "Password Does Not Match");
+//            }
+//        } else {
+//            uText.setText("");
+//            eText.setText("");
+//            pText1.setText("");
+//            pText2.setText("");
+//        }
     }
     /**
      * Arranging components within Registration

@@ -19,6 +19,12 @@ public class Bug implements Serializable {
         this.id = count;
         count++;
     }
+
+    public Bug(int id, String project, PriorityCategory priorityCat, String description) {
+        this(project, priorityCat, description);
+
+        this.id = id;
+    }
     // Getters and setters
     public int getId() {
         return id;

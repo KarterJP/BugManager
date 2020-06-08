@@ -1,6 +1,7 @@
 package model;
 
 import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,9 +12,118 @@ import java.util.List;
  */
 public class Database {
     private List<Bug> bugs;
+    private Connection con;
 
     public Database() {
         bugs = new ArrayList<Bug>();
+    }
+
+    /**
+     * Establishes a connection with the database
+     */
+    public void connect() throws Exception {
+        if (con == null) {
+            try {
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+            } catch (ClassNotFoundException e) {
+                throw new Exception("Driver not found");
+            }
+
+            String url = "jdbc:oracle:thin:@localhost:1521:BugManager";
+            con = DriverManager.getConnection(url, "SYSTEM", "Kjp939598");
+            System.out.println("Connected: " + con);
+        }
+    }
+
+    /**
+     * Releases the connection with the database
+     */
+    public void disconnect() {
+        if (con != null) {
+            try {
+                con.close();
+            } catch (SQLException throwables) {
+                System.out.println("Cannot close connection");
+            }
+        }
+    }
+
+    /**
+     * Saves data to database
+     * or updates data if already existing
+     * @throws SQLException
+     */
+    public void save() throws SQLException {
+        String checkSql = "select count(*) as count from BUGS where BUG_ID=?";
+
+        String insertSql = "insert into BUGS (BUG_ID, PROJECT_NAME, DESCRIPTION, PRIORITY_LEVEL) values (?, ?, ?, ?)";
+
+        String updateSql = "update BUGS set PROJECT_NAME=?, DESCRIPTION=?, PRIORITY_LEVEL=? where BUG_ID=?";
+
+        PreparedStatement checkStatement = con.prepareStatement(checkSql);
+        PreparedStatement insertStatement = con.prepareStatement(insertSql);
+        PreparedStatement updateStatement = con.prepareStatement(updateSql);
+
+        for (Bug bug : bugs) {
+            int id = bug.getId();
+            String project = bug.getProject();
+            PriorityCategory priority = bug.getPriorityCat();
+            String description = bug.getDescription();
+
+            checkStatement.setInt(1, id);
+
+            ResultSet checkResult = checkStatement.executeQuery();
+            checkResult.next();
+
+            int count = checkResult.getInt(1);
+
+            if (count == 0) {
+                System.out.println("Inserting bug with id " + id);
+
+                insertStatement.setInt(1, id);
+                insertStatement.setString(2, project);
+                insertStatement.setString(3, description);
+                insertStatement.setString(4, priority.toString());
+
+                insertStatement.executeUpdate();
+            } else {
+                System.out.println("Updating bug with id " + id);
+
+                updateStatement.setString(1, project);
+                updateStatement.setString(2, description);
+                updateStatement.setString(3, priority.toString());
+                updateStatement.setInt(4, id);
+
+                updateStatement.executeUpdate();
+            }
+        }
+        checkStatement.close();
+        insertStatement.close();
+        updateStatement.close();
+    }
+
+    public void load() throws SQLException {
+        bugs.clear();
+
+        String sql = "select BUG_ID, PROJECT_NAME, DESCRIPTION, PRIORITY_LEVEL from BUGS order by PROJECT_NAME";
+        Statement selectStatement = con.createStatement();
+
+
+
+        ResultSet results = selectStatement.executeQuery(sql);
+
+        while (results.next()) {
+            int id = results.getInt("BUG_ID");
+            String project = results.getString("PROJECT_NAME");
+            String description = results.getString("DESCRIPTION");
+            String priority = results.getString("PRIORITY_LEVEL");
+
+            Bug bug = new Bug(id, project, PriorityCategory.valueOf(priority), description);
+            bugs.add(bug);
+        }
+
+        selectStatement.close();
+        results.close();
     }
 
     /**

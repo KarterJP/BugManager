@@ -1,7 +1,7 @@
 package model;
 
 public enum PriorityCategory {
-    low,
-    medium,
-    high
+    Low,
+    Medium,
+    High
 }

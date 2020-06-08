@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
  * Toolbar to be displayed at the top of the application
  */
 public class Toolbar extends JPanel implements ActionListener {
-    private JButton signup;
-    private JButton login;
+    private JButton saveButton;
+    private JButton loadButton;
     private ToolbarListener toolbarListener;
     // Constructor
     public Toolbar() {
@@ -18,13 +18,13 @@ public class Toolbar extends JPanel implements ActionListener {
         setLayout(new FlowLayout(FlowLayout.RIGHT));
         setBorder(BorderFactory.createEtchedBorder());
         // Buttons
-        signup = new JButton("Signup");
-        login = new JButton("Login");
-        add(signup);
-        add(login);
+        saveButton = new JButton("Save");
+        loadButton = new JButton("Load");
+        add(saveButton);
+        add(loadButton);
         // Action listeners for buttons
-        signup.addActionListener(this);
-        login.addActionListener(this);
+        saveButton.addActionListener(this);
+        loadButton.addActionListener(this);
     }
     /**
      * Setting up app listener interface on toolbar
@@ -41,13 +41,13 @@ public class Toolbar extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JButton clicked = (JButton)e.getSource();
 
-        if (clicked == login) {
+        if (clicked == saveButton) {
             if(toolbarListener != null) {
-                toolbarListener.loginOpened();
+                toolbarListener.saveEventOccurred();
             }
-        } else if (clicked == signup) {
+        } else if (clicked == loadButton) {
             if(toolbarListener != null) {
-                toolbarListener.signupOpened();
+                toolbarListener.loadEventOccurred();
             }
         }
     }

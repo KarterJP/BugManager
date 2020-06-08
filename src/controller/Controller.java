@@ -6,6 +6,7 @@ import model.Database;
 import model.PriorityCategory;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -16,6 +17,27 @@ public class Controller {
 
     public List<Bug> getBugs() {
         return db.getBugs();
+    }
+
+    public void save() throws SQLException {
+        db.save();
+    }
+
+    public void load() throws SQLException {
+        db.load();
+    }
+
+    /**
+     * Attempts to establish connection with database
+     */
+    public void connect() throws Exception {
+        db.connect();
+    }
+    /**
+     * Disconnects from database
+     */
+    public void disconnect() {
+        db.disconnect();
     }
 
     /**
@@ -31,13 +53,13 @@ public class Controller {
         PriorityCategory priorityCategory;
 
         if (priorityCatId == 0) {
-            priorityCategory = PriorityCategory.low;
+            priorityCategory = PriorityCategory.Low;
         }
         else if (priorityCatId == 1) {
-            priorityCategory = PriorityCategory.medium;
+            priorityCategory = PriorityCategory.Medium;
         }
         else {
-            priorityCategory = PriorityCategory.high;
+            priorityCategory = PriorityCategory.High;
         }
 
         Bug bug = new Bug(project, priorityCategory, description);

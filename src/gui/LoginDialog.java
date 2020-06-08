@@ -42,34 +42,34 @@ public class LoginDialog extends JDialog implements ActionListener {
      * @param e - ActionEvent object
      */
     public void actionPerformed(ActionEvent e) {
-        // If login button is clicked
-        if (e.getSource() == loginBtn) {
-            int x = 0;
-            String s1 = uText.getText();
-            char[] s2 = pText.getPassword();
-            String s3 = new String(s2);
-
-                try {
-                    /*Class.forName("oracle.jdbc.driver.OracleDriver");
-                    Connection con = DriverManager.getConnection(
-                            "jdbc:oracle:thin:@localhost:1521:BugManager","SYSTEM","Kjp939598");
-                    PreparedStatement ps = con.prepareStatement("SELECT username, pass FROM USERS WHERE username = '"+s1+"' AND pass = '"+s3+"'");
-                    ResultSet rs = ps.executeQuery();
-
-                    if (!rs.wasNull()) {*/
-                        JOptionPane.showMessageDialog(loginBtn, "Login successful");
-                        this.dispose();
-                    /*} else {
-                        JOptionPane.showMessageDialog(loginBtn, "Username or password invalid");
-                    }*/
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(loginBtn, "Error: " +ex);
-                }
-
-        } else {
-            uText.setText("");
-            pText.setText("");
-        }
+//        // If login button is clicked
+//        if (e.getSource() == loginBtn) {
+//            int x = 0;
+//            String s1 = uText.getText();
+//            char[] s2 = pText.getPassword();
+//            String s3 = new String(s2);
+//
+//                try {
+//                    Class.forName("oracle.jdbc.driver.OracleDriver");
+//                    Connection con = DriverManager.getConnection(
+//                            "jdbc:oracle:thin:@localhost:1521:BugManager","SYSTEM","Kjp939598");
+//                    PreparedStatement ps = con.prepareStatement("SELECT username, pass FROM USERS WHERE username = '"+s1+"' AND pass = '"+s3+"'");
+//                    ResultSet rs = ps.executeQuery();
+//
+//                    if (!rs.wasNull()) {*/
+//                        JOptionPane.showMessageDialog(loginBtn, "Login successful");
+//                        this.dispose();
+//                    } else {
+//                        JOptionPane.showMessageDialog(loginBtn, "Username or password invalid");
+//                    }
+//                } catch (Exception ex) {
+//                    JOptionPane.showMessageDialog(loginBtn, "Error: " +ex);
+//                }
+//
+//        } else {
+//            uText.setText("");
+//            pText.setText("");
+//        }
     }
     /**
      * Arranging components within Login

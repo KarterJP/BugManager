@@ -33,8 +33,10 @@ public class BugForm extends JPanel implements ActionListener{
         priorityLabel = new JLabel("Priority Level:");
         descriptionLabel = new JLabel("Description:");
         projectNameField = new JTextField(10);
+        projectNameField.setDocument(new TextFieldLimit(30));
         priorityList = new JList();
         descriptionArea = new JTextArea(10,10);
+        descriptionArea.setDocument(new TextFieldLimit(300));
         submit = new JButton("Submit");
         clear = new JButton("Clear");
         // Attaching labels to components

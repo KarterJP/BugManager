@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.prefs.Preferences;
 
 /**
@@ -47,10 +48,26 @@ public class MainFrame extends JFrame{
         signupDialog = new SignupDialog(this);
         toolbar.setToolbarListener(new ToolbarListener() {
             // Opens the existing user login form
-            public void loginOpened() { loginDialog.setVisible(true); }
+            public void saveEventOccurred() {
+                connect();
+
+                try {
+                    controller.save();
+                } catch (SQLException e) {
+                    JOptionPane.showMessageDialog(MainFrame.this, "Unable to save to database.", "Database Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
             // Opens the new user registration form
-            public void signupOpened() {
-                signupDialog.setVisible(true);
+            public void loadEventOccurred() {
+                connect();
+
+                try {
+                    controller.load();
+                } catch (SQLException throwables) {
+                    JOptionPane.showMessageDialog(MainFrame.this, "Unable to load from database.", "Database Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+                tablePanel.refresh();
             }
         });
         // bugForm
@@ -190,5 +207,16 @@ public class MainFrame extends JFrame{
             }
         });
         return menuBar;
+    }
+
+    /**
+     * Attempts to establish a connection with the database
+     */
+    private void connect() {
+        try {
+            controller.connect();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(MainFrame.this, "Could not connect to database.", "Database Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
